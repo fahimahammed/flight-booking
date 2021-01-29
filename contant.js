@@ -30,7 +30,7 @@ document.getElementById('book-btn').addEventListener("click", function () {
         document.getElementById('conformation-message').innerText = "Please complete all required fields.";
     }
     else{
-        document.getElementById('conformation-message').innerText = "Congratulations !! Your flight booking is on hold.";
+        document.getElementById('conformation-message').innerText = "Congratulations !! Your flight booking is confirmed.";
     }
     
 })
