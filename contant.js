@@ -25,10 +25,21 @@ document.getElementById('book-btn').addEventListener("click", function () {
         flyingTo == "" ||
         departureDate == ""
     ) {
+        // form fill up alert massage. 
         document.getElementById('conformation-message').innerText = "Please complete all required fields.";
     }
     else {
+
+        // conformation massage
         document.getElementById('conformation-message').innerText = "Congratulations !! Your flight booking is confirmed.";
+        
+        // after submiting form, All user information will be deleted.
+        document.getElementById('flying-from').value = "";
+        document.getElementById('flying-to').value = "";
+        document.getElementById('departure-date').value = "";
+        document.getElementById('return-date').value = "";
+        document.getElementById('first-count').value = "0";
+        document.getElementById('economy-count').value = "0";
     }
 
 })
