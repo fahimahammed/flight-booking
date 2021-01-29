@@ -20,19 +20,17 @@ document.getElementById('book-btn').addEventListener("click", function () {
     const flyingFrom = document.getElementById('flying-from').value;
     const flyingTo = document.getElementById('flying-to').value;
     const departureDate = document.getElementById('departure-date').value;
-    const returnDate = document.getElementById('return-date').value;
-   
-    if(flyingFrom == "" || 
-    flyingTo == "" || 
-    departureDate == "" || 
-    returnDate == "" 
-    ){
+
+    if (flyingFrom == "" ||
+        flyingTo == "" ||
+        departureDate == ""
+    ) {
         document.getElementById('conformation-message').innerText = "Please complete all required fields.";
     }
-    else{
+    else {
         document.getElementById('conformation-message').innerText = "Congratulations !! Your flight booking is confirmed.";
     }
-    
+
 })
 
 
