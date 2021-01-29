@@ -33,14 +33,15 @@ document.getElementById('book-btn').addEventListener("click", function () {
 
         // conformation massage
         document.getElementById('conformation-message').innerText = "Congratulations !! Your flight booking is confirmed.";
-        
+
         // after submiting form, All user information will be deleted.
-        document.getElementById('flying-from').value = "";
-        document.getElementById('flying-to').value = "";
-        document.getElementById('departure-date').value = "";
-        document.getElementById('return-date').value = "";
-        document.getElementById('first-count').value = "0";
-        document.getElementById('economy-count').value = "0";
+        afterSubmit('flying-from');
+        afterSubmit('flying-to');
+        afterSubmit('departure-date');
+        afterSubmit('return-date');
+    
+        document.getElementById('first-count').value = "1";
+        document.getElementById('economy-count').value = "1";
     }
 
 })
@@ -80,4 +81,9 @@ function totalPrice() {
     // total price...
     const totalTicketPrice = subTotalPrice + vat;
     document.getElementById('total-price').innerText = totalTicketPrice;
+}
+
+function afterSubmit(id) {
+    document.getElementById(id).value = "";
+    
 }
