@@ -16,6 +16,7 @@ document.getElementById('economy-minus-btn').addEventListener("click", function 
     quantityChange(false, "economy-count");
 })
 
+// book button event handler..
 document.getElementById('book-btn').addEventListener("click", function () {
     const flyingFrom = document.getElementById('flying-from').value;
     const flyingTo = document.getElementById('flying-to').value;
