@@ -39,12 +39,11 @@ document.getElementById('book-btn').addEventListener("click", function () {
         afterSubmit('flying-to');
         afterSubmit('departure-date');
         afterSubmit('return-date');
-    
-        document.getElementById('first-count').value = "0";
-        document.getElementById('economy-count').value = "0";
-        document.getElementById('sub-total').innerText = "0";
-        document.getElementById('total-vat').innerText = "0";
-        document.getElementById('total-price').innerText = "0";
+        afterSubmitInnerText('first-count');
+        afterSubmitInnerText('economy-count');
+        afterSubmitInnerText('sub-total');
+        afterSubmitInnerText('total-vat');
+        afterSubmitInnerText('total-price');
     }
 
 })
@@ -88,5 +87,9 @@ function totalPrice() {
 
 function afterSubmit(id) {
     document.getElementById(id).value = "";
-    
+
+}
+
+function afterSubmitInnerText(id) {
+    document.getElementById(id).value = "0";
 }
