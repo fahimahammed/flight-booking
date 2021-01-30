@@ -40,8 +40,11 @@ document.getElementById('book-btn').addEventListener("click", function () {
         afterSubmit('departure-date');
         afterSubmit('return-date');
     
-        document.getElementById('first-count').value = "1";
-        document.getElementById('economy-count').value = "1";
+        document.getElementById('first-count').value = "0";
+        document.getElementById('economy-count').value = "0";
+        document.getElementById('sub-total').innerText = "0";
+        document.getElementById('total-vat').innerText = "0";
+        document.getElementById('total-price').innerText = "0";
     }
 
 })
